@@ -1,5 +1,22 @@
 pragma solidity ^0.4.17;
 
+contract CampaignFactory{
+    /* ========================================================================
+       Public Variables
+       ========================================================================
+    */
+    address[] public gDeployedCampaigns;
+
+    function CreateCampaign(uint pMinContrib) public{
+        address new_campaign = new Campaign(pMinContrib, msg.sender);
+        gDeployedCampaigns.push(new_campaign);
+    }
+
+    function GetDeployedCampaigns() public view returns(address[]){
+        return gDeployedCampaigns;
+    }
+}
+
 contract Campaign{
     struct Request {
         string description;
@@ -37,8 +54,8 @@ contract Campaign{
     */
 
     // Constructor
-    function Campaign(uint pMinContrib) public {
-        gManager = msg.sender;
+    function Campaign(uint pMinContrib, address pCampaignCreator) public {
+        gManager = pCampaignCreator;
         gMinContrib = pMinContrib;
     }
 
