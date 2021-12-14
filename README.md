@@ -12,4 +12,9 @@
   - Web3/metamask will be instructed to show user a transaction that invokes the _Campaign Factory_
   - User pays the deployment cost
   - Factory deploys a new copy of `Campaign`
-  - Campaign Factory will send (to system handler) a list of all deployed campaigns 
+  - Campaign Factory will send (to system handler) a list of all deployed campaigns
+
+## Frontpage
+
+--
+
