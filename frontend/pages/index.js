@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react'; // https://react.semantic-ui.com/
+import { Card, Button } from 'semantic-ui-react'; // https://react.semantic-ui.com/
 import factory from '../factory';
 
 // export default () => {
@@ -20,8 +20,7 @@ class CampaignIndex extends Component{
     //     console.log(campaigns);
     // }
 
-    renderCampaigns(){
-        const items = this.props.campaigns.map(address=>{ // This is the loop
+    renderCampaigns(){const items = this.props.campaigns.map(address=>{ // This is the loop
             return {
                 header : address,
                 description: <a>View Campaign</a>,
@@ -38,7 +37,14 @@ class CampaignIndex extends Component{
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
 
             <h1>Campaign Factory</h1>
+
+            <h3>Open Campaigns</h3>
             {this.renderCampaigns()}
+            <Button
+                content='Create Campaign'
+                icon='add  circle'
+                primary
+            />
             </div>;
     }
 }
