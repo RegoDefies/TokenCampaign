@@ -1,5 +1,4 @@
 # TokenCampaign
-
 ## Voting requirements
 
 * \#1 A single contributor shall be able to vote only one time in a request, so the system shall track who has voted in each request
