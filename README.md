@@ -1,6 +1,6 @@
 # TokenCampaign
 ## Voting requirements
-tesd
+
 * \#1 A single contributor shall be able to vote only one time in a request, so the system shall track who has voted in each request
 * \#2 The voting system must be resilient with a large number of contributors
 * \#3 No need to keep track the non-approvers to differentiate against no-voters
